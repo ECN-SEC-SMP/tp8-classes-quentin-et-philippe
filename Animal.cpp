@@ -5,7 +5,6 @@
 using namespace std;
 
 Animal::Animal(int maxX, int maxY){
-    srand(time(nullptr));
     this->x = rand() % maxX + 1;
     this->y = rand() % maxY + 1;
     this->vivant = 1;
@@ -34,6 +33,7 @@ Attaque Animal::getAttaque()const{return typeAttaque;};
 void Animal::setVivant(bool v){vivant = v;};
  
 bool Animal::attaque(Animal &a){
+    this -> setAttaque();
     Attaque attaqueadverse = a.getAttaque();//on récupère l'attaque adverse
     bool victoire = typeAttaque.resoudreAttaque(attaqueadverse); // on résout le duel
 
