@@ -1,6 +1,7 @@
 #include "Attaque.h"
-#include <_stdlib.h>
+#include <cstdlib>
 #include <string>
+
 
 
 class Attaque {
