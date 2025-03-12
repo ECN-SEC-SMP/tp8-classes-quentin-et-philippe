@@ -1,5 +1,6 @@
 #include <string>
 #include "Animal.h"
+#include "Attaque.h"
 #include <cstdlib>
 #include <ctime>
 using namespace std;
