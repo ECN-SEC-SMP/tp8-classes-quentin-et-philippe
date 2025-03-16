@@ -3,6 +3,7 @@
 #include "Attaque.h"
 #include <cstdlib>
 #include <ctime>
+#include "Attaque.h"
 using namespace std;
 
 Animal::Animal(int maxX, int maxY){
@@ -30,6 +31,10 @@ int Animal::getY() const{return y;};
 bool Animal::getVivant() const{return vivant;};
 
 Attaque Animal::getAttaque()const{return typeAttaque;};
+
+int Animal::getNbDeplacements() {return this->nBDeplacement;};
+
+void Animal::incrementerNbDeplacements() {this->nBDeplacement++;};
 
 void Animal::setVivant(bool v){vivant = v;};
  
