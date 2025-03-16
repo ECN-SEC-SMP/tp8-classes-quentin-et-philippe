@@ -2,20 +2,29 @@
 using namespace std;
 
 class Animal{
+
+    private : 
+        int nBDeplacement;
+
     protected : 
         string nom;
         int x ; //abscisse
         int y ; //ordonnee
         bool vivant; 
         Attaque typeAttaque;
+
     public :
         Animal(int maxX, int maxY);
         Animal(int maxX, int maxY, int a, int b);
+
         string getNom() const;
         int getX() const;
         int getY() const;
         bool getVivant() const;
         Attaque getAttaque()const;
+        int getNbDeplacements();
+
+        void incrementerNbDeplacements();
         void setVivant(bool v);
         bool attaque(Animal &a);
         virtual void setAttaque() = 0; //virtuelle pure
